@@ -4,3 +4,9 @@ def calculate_vwap(prices: list[float], volumes: list[int]) -> float:
     """
     weighted_sum: float = sum(price * volume for price, volume in zip(prices,volumes))
     return weighted_sum / sum(volumes)
+
+def calculate_price_change(current_price: float, previous_price: float) -> float:
+    """
+    Calculates price change.
+    """
+    return current_price - previous_price
